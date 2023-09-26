@@ -18,3 +18,9 @@ font: arial,sans-serif;
 text-shadow: none;
 font-size: 4em;
 }
+
+form {
+    border: solid 2px black;
+    border-radius: 1em;
+    padding: 2em;
+}
