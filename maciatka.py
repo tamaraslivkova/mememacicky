@@ -31,18 +31,15 @@ def generateimage():
 # WEBPAGE RESOURCES
 # --------------------
 
-
 # Root file is the index.html
 @app.route('/')
 def welcome():
     return render_template("index.html")
 
-
 # When user requests style css resource, return it from the resources folder
 @app.route("/styles.css")
 def style():
     return send_from_directory(os.path.join(app.root_path, 'templates'), 'styles.css')
-
 
 # Start web application
 if __name__ == "__main__":
