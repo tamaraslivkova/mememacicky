@@ -10,13 +10,20 @@ app = Flask(__name__)
 
 # OpenAI image generator
 # Register to openAI using personal API KEY
-# openai.api_key = os.getenv("OPENAI_API_KEY")
-# Generate image using openAI
-# openai.Image.create(
-#  prompt="A cute baby sea otter",
-#  n=2,
-#  size="1024x1024"
-# )
+@app.route('/result',methods=["POST"])
+def generateimage():
+    data = request.form
+    prompt = f"""You are a cat meme generator. Using responses from a user form, generate a meme with a customized 
+    cat. The user has answered the form with these responses:\n mood of the cat is {data['feel']}\n color of the cat's 
+    fur is {data['color']}\n the clothes the cat is wearing are {data['top']} and {data['bottom']}\n the cat is 
+    holding a {data['food']} in its paw\n the background of the generated image is {data['background']}\n and the 
+    quote on the bottom of the image says: {data['quote']}\n"""
+    openai.api_key = os.getenv("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")
+    imageresult = openai.Image.create(
+        prompt=prompt,
+        n=1,
+        size="1024x1024"
+    )
 
 
 # --------------------
