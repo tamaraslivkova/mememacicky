@@ -16,7 +16,7 @@ def generateimage():
     data = request.form
     prompt = f"""You are a realistic cat photo generator.\n Generate a picture of a {data['feel']} {data['color']} cat 
     wearing a {data['hat']} on a {data['background']} background with a {data['food']} and on the cat's right is a 
-    {data['vinea']} kitten with {data['gift']} and on its left is a {data['coffee']}.\n"""
+    {data['kitten']} kitten with {data['gift']} and on its left is a {data['coffee']}.\n"""
     openai.api_key = os.getenv("OPENAI_KEY")
     response = openai.Image.create(
         prompt=prompt,
