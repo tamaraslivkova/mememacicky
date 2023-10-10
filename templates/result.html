@@ -2,10 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>MEME MACKA NA KAZDY DEN</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>{{name}}</h1>
-<h1>{{surname}}</h1>
+<form  method="post" action="/result">
+    <label for="feel"><b>How are you feeling today?</b></label><br> <!--vygeneruje mood macky-->
+    <input type="text" id="feel" name="feel" value=""><br><br>
+    <label for="color"><b>Pick a color:</b></label><br>  <!-- vygeneruje farbu srsti -->
+    <input type="text" id="color" name="color" value=""><br><br>
+    <label for="top"><b>What top are you wearing today?</b></label><br> <!--vygeneruje top macky-->
+    <input type="text" id="top" name="top" value=""><br><br>
+    <label for="bottom"><b>What bottoms are you wearing today?</b></label><br> <!--vygeneruje spodok macky-->
+    <input type="text" id="bottom" name="bottom" value=""><br><br>
+    <label for="food"><b>What food do you hate?</b></label><br> <!--vygeneruje jedlo macky-->
+    <input type="text" id="food" name="food" value=""><br><br>
+    <label for="background"><b>Where would you want to be right now?</b></label><br> <!--vygeneruje background v meme-->
+    <input type="text" id="background" name="background" value=""><br><br>
+    <label for="quote"><b>Write any quote:</b></label><br> <!--vygeneruje quote v meme-->
+    <input type="text" id="quote" name="quote" value=""><br><br>
+    <input type="submit" value="Submit" class="form-submit-button">
+</form>
+<img src="{{img_url_1}}" alt="Your meme">
+<img src="{{img_url_2}}" alt="Your meme">
+<img src="{{img_url_3}}" alt="Your meme">
+<img src="{{img_url_4}}" alt="Your meme">
 </body>
 </html>
