@@ -22,8 +22,8 @@ def generateimage():
         n=1,
         size="1024x1024"
     )
-    image_url = response['prompt'][0]['url']
-    print(image_url)
+    image_url = response['data'][0]['url']
+    return render_template("result.html", img_url=image_url)
 
 # --------------------
 # WEBPAGE RESOURCES
