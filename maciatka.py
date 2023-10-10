@@ -14,9 +14,11 @@ app = Flask(__name__)
 @app.route('/result',methods=["POST"])
 def generateimage():
     data = request.form
-    prompt = f"""You are a cat meme generator. Using responses from a user form, generate a meme with a customized 
+    prompt = f"""You are a cat picture generator. Using responses from a user form, generate a picture with a customized 
     cat. The user has answered the form with these responses:\n the mood of the cat is {data['feel']}.\n The color of 
-    the cat's fur is {data['color']}.\n The cat is holding a {data['food']} in its paw.\n"""
+    the cat's fur is {data['color']}.\n The cat is holding a {data['food']} in its paw.\n It is wearing this kind of 
+    hat: {data['hat']}.\nThe background of the image
+    is a {data['background']}.\n"""
     openai.api_key = os.getenv("OPENAI_KEY")
     response = openai.Image.create(
         prompt=prompt,
