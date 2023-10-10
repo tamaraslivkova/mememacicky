@@ -23,7 +23,7 @@ def generateimage():
         size="1024x1024"
     )
     image_url = response['data'][0]['url']
-    app.logger.info(f"image generation: [Feeling: {data['feel']}, Color: {data['color']}, Food: {data['food']}], output URL: '{image_url}'")
+    app.logger.info(f"image generation: [Feeling: {data['feel']}, Color: {data['color']}, Food: {data['food']}], output URL: {image_url}")
     return render_template("result.html", img_url=image_url)
 
 # --------------------
