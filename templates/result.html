@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>MEME MACKA NA KAZDY DEN</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #catmeme {
+            width: 800px;
+            height: 800px;
+            object-fit: none;
+            object-position: right top;
+            border: 2px solid black;
+    </style>
 </head>
 <body>
 <form  method="post" action="/result">
@@ -25,6 +33,7 @@
     <input type="text" id="gift" name="gift" value=""><br><br>
     <input type="submit" value="Submit" class="form-submit-button">
 </form>
-<img src="{{img_url}}" alt="Your meme">
+<img id="catmeme"
+     src="{{img_url}}" alt="Your meme">
 </body>
 </html>
