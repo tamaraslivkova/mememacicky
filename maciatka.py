@@ -1,6 +1,7 @@
-import os, openai, flask
+import os, openai, flask, logging
 from flask import Flask, render_template, request, send_from_directory
 
+logging.basicConfig(filename="mememacicky_output.log",level=logging.DEBUG)
 app = Flask(__name__)
 
 
@@ -15,7 +16,7 @@ def generateimage():
     data = request.form
     prompt = f"""You are a cat meme generator. Using responses from a user form, generate a meme with a customized 
     cat. The user has answered the form with these responses:\n the mood of the cat is {data['feel']}.\n The color of 
-    the cat's fur is {data['color']}.\n The cat is holding a {data['food']} in its paw\n"""
+    the cat's fur is {data['color']}.\n The cat is holding a {data['food']} in its paw.\n"""
     openai.api_key = os.getenv("OPENAI_KEY")
     response = openai.Image.create(
         prompt=prompt,
@@ -23,6 +24,7 @@ def generateimage():
         size="1024x1024"
     )
     image_url = response['data'][0]['url']
+    app.logger.info(f"image generation: [Feeling: {data['feel']}, Color: {data['color']}, Food: {data['food']}], output URL: '{image_url}'")
     return render_template("result.html", img_url=image_url)
 
 # --------------------
