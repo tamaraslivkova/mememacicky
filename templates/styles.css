@@ -1,5 +1,5 @@
 body {
-  background-color: salmon;
+  background-color: #EAB1E1;
 }
 h1 {
   color: blue;
@@ -7,21 +7,34 @@ h1 {
 p {
   color: red;
 }
+
+input[type=text] {
+  width: 25%;
+  padding: 10px 18px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+  border-color: grey
+
+}
 .form-submit-button {
-background: red;
-color: white;
-border-style: outset;
-border-color: black;
-height: 250px;
-width: 300px;
-font: arial,sans-serif;
-text-shadow: none;
-font-size: 75px;
+  display: inline-block;
+  padding: 60px 70px;
+  font-size: 55px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FF0000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #a23333;
 }
-
-form {
-    border: solid 2px black;
-    border-radius: 1em;
-    padding: 2em;
+.form-submit-button:hover {background-color: #e40000}
+.form-submit-button:active {
+  background-color: #e40000;
+  box-shadow: 0 5px #660600;
+  transform: translateY(4px);
 }
-
