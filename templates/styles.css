@@ -10,12 +10,11 @@ p {
 
 input[type=text] {
   width: 25%;
-  padding: 10px 18px;
+  padding: 8px 16px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid red;
-  border-color: grey
+  border-bottom: 2px solid grey;
 
 }
 .form-submit-button {

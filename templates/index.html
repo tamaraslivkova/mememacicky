@@ -9,8 +9,14 @@
 <form  method="post" action="/result">
     <label for="feel"><b>How are you feeling today?</b></label><br> <!--vygeneruje mood macky-->
     <input type="text" id="feel" name="feel" value=""><br><br>
-    <label for="color"><b>Pick a color:</b></label><br>  <!-- vygeneruje farbu srsti -->
-    <input type="text" id="color" name="color" value=""><br><br>
+    <label for="color"><b>Pick a color:</b></label><br> <!--vygeneruje farbu srsti-->
+    <select id="color" name="color">
+      <option value="select">select...</option>
+      <option value="black">black</option>
+      <option value="white">white</option>
+      <option value="brown">brown</option>
+      <option value="grey">grey</option>
+    </select><br><br>
     <label for="hat"><b>Write a funny type of hat:</b></label><br> <!--vygeneruje ciapocku macky-->
     <input type="text" id="hat" name="hat" value=""><br><br>
     <label for="food"><b>What food do you hate?</b></label><br> <!--vygeneruje jedlo macky-->
@@ -19,6 +25,7 @@
     <input type="text" id="background" name="background" value=""><br><br>
     <label for="vinea"><b>White or red Vinea?</b></label><br> <!--vygeneruje farbu maciatka-->
     <select id="vinea" name="vinea">
+      <option value="select">select...</option>
       <option value="red">red</option>
       <option value="white">white</option>
     </select><br><br>
@@ -26,6 +33,7 @@
     <input type="text" id="coffee" name="coffee" value=""><br><br>
     <label for="gift"><b>What is a better gift - flowers or headphones?</b></label><br> <!--vecicku maciatka-->
     <select id="gift" name="gift">
+      <option value="select">select...</option>
       <option value="flowers">flowers</option>
       <option value="headphones">headphones</option>
     </select><br><br>
