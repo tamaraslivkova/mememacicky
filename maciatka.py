@@ -1,4 +1,4 @@
-import os, openai, flask, logging
+import os, openai, flask, logging, sqlite3
 from flask import Flask, render_template, request, send_from_directory
 
 logging.basicConfig(filename="mememacicky_output.log",level=logging.DEBUG)
@@ -31,6 +31,11 @@ def generateimage():
     )
     image_url = response['data'][0]['url']
     app.logger.info(f"image generation: [Feeling: {data['feel']}, Color: {data['color']}, Food: {data['food']}], output URL: {image_url}")
+    con = sqlite3.connect("mememacicky.db")
+    cur = con.cursor()
+    cur.execute("""INSERT INTO images (url, prompt)
+    VALUES(?,?)""", (image_url, prompt))
+    con.commit()
     return render_template("result.html", img_url=image_url)
 
 # --------------------
