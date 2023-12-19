@@ -24,8 +24,10 @@ def generateimage():
     openai.api_key = os.getenv("OPENAI_KEY")
     response = openai.Image.create(
         prompt=prompt,
+        model="dall-e-3",
         n=1,
-        size="1024x1024"
+        size="1024x1024",
+        quality="standard",
     )
     image_url = response['data'][0]['url']
     app.logger.info(f"image generation: [Feeling: {data['feel']}, Color: {data['color']}, Food: {data['food']}], output URL: {image_url}")
