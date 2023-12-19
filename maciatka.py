@@ -55,3 +55,19 @@ def style():
 # Start web application
 if __name__ == "__main__":
     app.run(debug=True)
+
+#ahoj tamarka tu je emka chybas nam
+#ahoj emka aj mne chybate :(
+#    ale zajtra uz pridem!
+#    tesime sa na tebaa
+#    aj ja na vaas
+# Pocuvaj, chce sa ti teraz kodit?
+# asi ani nie isla by som si radsej umyt vlasy
+# dobre tak si chod umyt tie vlasy
+# Len som to chcel vyskusat
+#jasne oki tak idem teda
+# ale uz sa ta nevieme dockat! XD
+#ja tiez sa uz neviem dockat vas!!  <♥️<- toto je reaction emoji XD
+# dobre, tak zitra, chod hore do code with me a daj stop sharing and kick out everyone
+#oukej papa
+# aj tebe!
