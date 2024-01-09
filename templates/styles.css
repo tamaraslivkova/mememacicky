@@ -37,3 +37,14 @@ input[type=text] {
   box-shadow: 0 5px #660600;
   transform: translateY(4px);
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 20px;
+  text-align: justice;
+}

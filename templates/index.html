@@ -4,40 +4,56 @@
     <meta charset="UTF-8">
     <title>MEME MACKA NA KAZDY DEN</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #macickylogo {
+            width: 50vw;
+            top: 0;
+            right: 0;
+            border: 2px solid black;
+            }
+    </style>
 </head>
 <body>
-<form  method="post" action="/result">
-    <label for="feel"><b>How are you feeling today?</b></label><br> <!--vygeneruje mood macky-->
-    <input type="text" id="feel" name="feel" value=""><br><br>
-    <label for="color"><b>Pick a color:</b></label><br> <!--vygeneruje farbu srsti-->
-    <select id="color" name="color">
-      <option value="select">select...</option>
-      <option value="black">black</option>
-      <option value="white">white</option>
-      <option value="brown">brown</option>
-      <option value="grey">grey</option>
-    </select><br><br>
-    <label for="hat"><b>Write a funny type of hat:</b></label><br> <!--vygeneruje ciapocku macky-->
-    <input type="text" id="hat" name="hat" value=""><br><br>
-    <label for="food"><b>What food do you hate?</b></label><br> <!--vygeneruje jedlo macky-->
-    <input type="text" id="food" name="food" value=""><br><br>
-    <label for="background"><b>Where would you want to be right now?</b></label><br> <!--vygeneruje background v meme-->
-    <input type="text" id="background" name="background" value=""><br><br>
-    <label for="vinea"><b>White or red Vinea?</b></label><br> <!--vygeneruje farbu maciatka-->
-    <select id="vinea" name="vinea">
-      <option value="select">select...</option>
-      <option value="red">red</option>
-      <option value="white">white</option>
-    </select><br><br>
-    <label for="coffee"><b>I'm ordering coffee...what are you getting?</b></label><br> <!--vygeneruje kavicku-->
-    <input type="text" id="coffee" name="coffee" value=""><br><br>
-    <label for="gift"><b>What is a better gift - flowers or headphones?</b></label><br> <!--vecicku maciatka-->
-    <select id="gift" name="gift">
-      <option value="select">select...</option>
-      <option value="flowers">flowers</option>
-      <option value="headphones">headphones</option>
-    </select><br><br>
-    <input type="submit" value="Submit" class="form-submit-button">
-</form>
+<div class="grid-container">
+    <div class="grid-item">
+        <form  method="post" action="/result">
+            <label for="feel"><b>How are you feeling today?</b></label><br> <!--vygeneruje mood macky-->
+            <input type="text" id="feel" name="feel" value=""><br><br>
+            <label for="color"><b>Pick a color:</b></label><br> <!--vygeneruje farbu srsti-->
+            <select id="color" name="color">
+                <option value="select">select...</option>
+                <option value="black">black</option>
+                <option value="white">white</option>
+                <option value="brown">brown</option>
+                <option value="grey">grey</option>
+            </select><br><br>
+            <label for="hat"><b>Write a funny type of hat:</b></label><br> <!--vygeneruje ciapocku macky-->
+            <input type="text" id="hat" name="hat" value=""><br><br>
+            <label for="food"><b>What food do you hate?</b></label><br> <!--vygeneruje jedlo macky-->
+            <input type="text" id="food" name="food" value=""><br><br>
+            <label for="background"><b>Where would you want to be right now?</b></label><br> <!--vygeneruje background v meme-->
+            <input type="text" id="background" name="background" value=""><br><br>
+            <label for="vinea"><b>White or red Vinea?</b></label><br> <!--vygeneruje farbu maciatka-->
+            <select id="vinea" name="vinea">
+                <option value="select">select...</option>
+                <option value="red">red</option>
+                <option value="white">white</option>
+            </select><br><br>
+            <label for="coffee"><b>I'm ordering coffee...what are you getting?</b></label><br> <!--vygeneruje kavicku-->
+            <input type="text" id="coffee" name="coffee" value=""><br><br>
+            <label for="gift"><b>What is a better gift - flowers or headphones?</b></label><br> <!--vecicku maciatka-->
+            <select id="gift" name="gift">
+                <option value="select">select...</option>
+                <option value="flowers">flowers</option>
+                <option value="headphones">headphones</option>
+            </select><br><br>
+            <input type="submit" value="Submit" class="form-submit-button">
+        </form>
+    </div>
+    <div class="grid-item">
+        <img id="macickylogo"
+        src="mememacicky.JPG" alt="macicky logo">
+    </div>
+</div>
 </body>
 </html>
