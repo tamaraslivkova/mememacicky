@@ -15,38 +15,29 @@
     </style>
 </head>
 <body>
-<form  method="post" action="/result">
+<form>
     <label for="feel"><b>How are you feeling today?</b></label><br> <!--vygeneruje mood macky-->
-    <input type="text" id="feel" name="feel" value=""><br><br>
+    <input type="text" id="feel" name="feel" value="{{feeling}}" disabled><br><br>
     <label for="color"><b>Pick a color:</b></label><br> <!--vygeneruje farbu srsti-->
-    <select id="color" name="color">
-      <option value="select">select...</option>
-      <option value="black">black</option>
-      <option value="white">white</option>
-      <option value="brown">brown</option>
-      <option value="grey">grey</option>
-    </select><br><br>
+    <input type="text" id="color" name="color" value="{{colour}}" disabled><br><br>
     <label for="hat"><b>Write a funny type of hat:</b></label><br> <!--vygeneruje ciapocku macky-->
-    <input type="text" id="hat" name="hat" value=""><br><br>
+    <input type="text" id="hat" name="hat" value="{{hat}}" disabled><br><br>
     <label for="food"><b>What food do you hate?</b></label><br> <!--vygeneruje jedlo macky-->
-    <input type="text" id="food" name="food" value=""><br><br>
+    <input type="text" id="food" name="food" value="{{food}}" disabled><br><br>
     <label for="background"><b>Where would you want to be right now?</b></label><br> <!--vygeneruje background v meme-->
-    <input type="text" id="background" name="background" value=""><br><br>
+    <input type="text" id="background" name="background" value="{{background}}" disabled><br><br>
     <label for="vinea"><b>White or red Vinea?</b></label><br> <!--vygeneruje farbu maciatka-->
-    <select id="vinea" name="vinea">
-      <option value="select">select...</option>
-      <option value="red">red</option>
-      <option value="white">white</option>
+    <select id="vinea" name="vinea" disabled>
+      <option value="select" selected>{{vinea}}</option>
     </select><br><br>
     <label for="coffee"><b>I'm ordering coffee...what are you getting?</b></label><br> <!--vygeneruje kavicku-->
-    <input type="text" id="coffee" name="coffee" value=""><br><br>
+    <input type="text" id="coffee" name="coffee" value="{{coffee}}" disabled><br><br>
     <label for="gift"><b>What is a better gift - flowers or headphones?</b></label><br> <!--vecicku maciatka-->
-    <select id="gift" name="gift">
-      <option value="select">select...</option>
-      <option value="flowers">flowers</option>
-      <option value="headphones">headphones</option>
+    <select id="gift" name="gift" disabled>
+      <option value="select" selected>{{gift}}</option>
     </select><br><br>
-    <input type="submit" value="Submit" class="form-submit-button">
+    <label for="quote"><b>Write any quote:</b></label><br> <!--vygeneruje quote-->
+    <input type="text" id="quote" name="quote" value="{{quote}}" disabled><br><br>
 </form>
 <img id="catmeme"
      src="{{img_url}}" alt="Your meme">

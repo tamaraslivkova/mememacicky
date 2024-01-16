@@ -20,7 +20,7 @@ def generateimage():
     data = request.form
     prompt = f"""You are a realistic cat photo generator.\n Generate a picture of a {data['feel']} {data['color']} cat 
     wearing a {data['hat']} on a {data['background']} background with a {data['food']} and on the cat's right is a 
-    {data['vinea']} kitten with {data['gift']} flower and on its left is a {data['coffee']}.\n"""
+    {data['vinea']} kitten with {data['gift']} flower and on its left is a {data['coffee']}.Also include this text:{data['quote']}\n"""
     openai.api_key = os.getenv("OPENAI_KEY")
     response = openai.Image.create(
         prompt=prompt,
@@ -36,7 +36,7 @@ def generateimage():
     cur.execute("""INSERT INTO images (url, prompt)
     VALUES(?,?)""", (image_url, prompt))
     con.commit()
-    return render_template("result.html", img_url=image_url)
+    return render_template("result.html", img_url=image_url, feeling=data['feel'], colour=data['color'], vinea=data['vinea'], food=data['food'], background=data['background'], coffee=data['coffee'], quote=data['quote'], hat=data['hat'], gift=data['gift'])
 
 # --------------------
 # WEBPAGE RESOURCES
@@ -51,6 +51,9 @@ def welcome():
 @app.route("/styles.css")
 def style():
     return send_from_directory(os.path.join(app.root_path, 'templates'), 'styles.css')
+@app.route("/mememacicky.jpg")
+def icon():
+    return send_from_directory(os.path.join(app.root_path, 'templates'), 'mememacicky.jpg')
 
 # Start web application
 if __name__ == "__main__":
